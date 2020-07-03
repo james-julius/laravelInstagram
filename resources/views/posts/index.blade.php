@@ -2,9 +2,12 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-8">
-            <img src="/storage/{{$post->image}}" alt="" class="w-100">
+    @foreach ($posts as $post)
+    <div class="row mb-4">
+        <div class="col-6 offset-2">
+            <a href="/profile/{{$post->user->id}}">
+                <img src="/storage/{{$post->image}}" alt="" class="w-100" style="max-width: 400px; max-height: 400px;">
+                </a>
         </div>
         <div class="col-4">
             <div>
@@ -32,5 +35,6 @@
             </div>
         </div>
     </div>
+    @endforeach
 </div>
 @endsection
