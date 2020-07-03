@@ -7,4 +7,6 @@ Thanks for registering! Please click the button below to confirm your account.
 Confirm Account
 @endcomponent
 
+Thanks from the hive mind at<br>
+{{ config('app.name') }}
 @endcomponent
